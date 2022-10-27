@@ -7,20 +7,13 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Set up JDK 11
       uses: actions/setup-java@v3.6.0
       with:
         distribution: 'temurin'
         java-version: 11
         cache: 'maven'
-    - name: Cache for maven
-      uses: actions/cache@v1
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
     - name: Build with Maven
-      run: mvn -B package
+      run: mvn -B clean package --file pom.xml
 
