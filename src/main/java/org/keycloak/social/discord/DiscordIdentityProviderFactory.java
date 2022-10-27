@@ -17,7 +17,6 @@
 
 package org.keycloak.social.discord;
 
-import org.keycloak.broker.oidc.OAuth2IdentityProviderConfig;
 import org.keycloak.broker.provider.AbstractIdentityProviderFactory;
 import org.keycloak.broker.social.SocialIdentityProviderFactory;
 import org.keycloak.models.IdentityProviderModel;
