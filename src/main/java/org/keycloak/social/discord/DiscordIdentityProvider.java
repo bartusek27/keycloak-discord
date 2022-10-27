@@ -84,6 +84,7 @@ public class DiscordIdentityProvider extends AbstractOAuth2IdentityProvider<Disc
         log.debug("doGetFederatedIdentity()");
         JsonNode profile = null;
         try {
+
             profile = SimpleHttp.doGet(PROFILE_URL, session).header("Authorization", "Bearer " + accessToken).asJson();
         } catch (Exception e) {
             throw new IdentityBrokerException("Could not obtain user profile from discord.", e);
