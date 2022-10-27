@@ -18,10 +18,10 @@ jobs:
         distribution: 'temurin'
         java-version: 11
         cache: 'maven'
-    - name: Setup node 10
+    - name: Setup node 16
       uses: actions/setup-node@v1
       with:
-        node-version: '10.x'
+        node-version: '16.x'
     - name: Cache for maven
       uses: actions/cache@v1
       with:
