@@ -29,7 +29,7 @@ import org.keycloak.events.EventBuilder;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.services.ErrorPageException;
 import org.keycloak.services.messages.Messages;
-import org.apache.http.legacy;
+import org.apache.http.client.methods.HttpGet;
 
 import javax.ws.rs.core.Response;
 import java.util.Set;
